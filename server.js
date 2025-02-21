@@ -15,7 +15,7 @@ const MONGO_URI = process.env.MONGO_URI;
 
 // Connexion à MongoDB
 mongoose
-  .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(MONGO_URI, { })
   .then(() => console.log("Connecté à MongoDB"))
   .catch((err) => console.error("Erreur de connexion MongoDB:", err));
 
