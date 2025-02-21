@@ -13,11 +13,16 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 const MONGO_URI = process.env.MONGO_URI;
 
-// Connexion à MongoDB
+// Connexion à MongoDB (Atlas)
 mongoose
-  .connect(MONGO_URI, { })
+  .connect(MONGO_URI, {
+   
+   
+  })
   .then(() => console.log("Connecté à MongoDB"))
-  .catch((err) => console.error("Erreur de connexion MongoDB:", err));
+  .catch((err) => {
+    console.error("Erreur de connexion MongoDB:", err);
+  });
 
 /** ROUTES (CRUD) **/
 // GET toutes les réunions

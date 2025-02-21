@@ -7,14 +7,14 @@ const SubItemSchema = new mongoose.Schema({
 
 const AgendaItemSchema = new mongoose.Schema({
   text: { type: String, required: true },
-  subItems: [SubItemSchema] // sous-items
+  subItems: [SubItemSchema]
 });
 
 const MeetingSchema = new mongoose.Schema({
   date: { type: Date, required: true },
   title: { type: String, required: true },
   summary: { type: String, default: "" },
-  agenda: [AgendaItemSchema] // tableau d'items, chacun avec subItems
+  agenda: [AgendaItemSchema]
 });
 
 module.exports = mongoose.model("Meeting", MeetingSchema);
